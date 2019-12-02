@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.test.CloudUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.test.CloudUser">
+        <id column="ID" property="id"/>
+        <result column="USER_NAME" property="userName"/>
+        <result column="IS_DELETED" property="isDeleted"/>
+        <result column="CREATED_BY" property="createdBy"/>
+        <result column="UPDATED_BY" property="updatedBy"/>
+        <result column="DATE_CREATED" property="dateCreated"/>
+        <result column="DATE_UPDATED" property="dateUpdated"/>
+        <result column="REMARK" property="remark"/>
+    </resultMap>
+    <select id="getById">
+        LOAD DATA LOCAL INFILE 'C:/Users/YunFengLiu/Desktop/RBMQ/aa.txt' into table aa FIELDS TERMINATED BY ',';
+    </select>
+
+</mapper>
